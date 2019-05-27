@@ -75,7 +75,7 @@ def main():
                 shape = low.shape
                 image_low = np.zeros((1, shape[0], shape[1], 1), dtype=float)
                 image_low[0, :, :, 0] = low
-
+                shape = original.shape
                 pred0 = sess.run([pred], feed_dict={images: image_low})
                 output = pred0[0]
                 pre1 = output * 255
